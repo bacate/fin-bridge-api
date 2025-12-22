@@ -6,5 +6,5 @@ const server = http.createServer(app)
 const port = process.env.PORT
 
 server.listen(port, () => {
-    console.log(`Servidor iniciado na porta: ${port}`)
+    console.log(`Server connected on port: ${port}`)
 })
