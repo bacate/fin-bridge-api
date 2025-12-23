@@ -1,6 +1,6 @@
 {
   "name": "fin-bridge",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "This project is an attempt to simulate Open Finance and put into practice some concepts that were recently studied.",
   "main": "index.js",
   "directories": {
