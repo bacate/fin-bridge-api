@@ -20,7 +20,7 @@ This project is an attempt to simulate Open Finance and put into practice some c
 * Framework: **Node.js**
 * Database: **MongoDB**
 * Others:
-
+  * IBM App Connect
   * Git
 
 ---
