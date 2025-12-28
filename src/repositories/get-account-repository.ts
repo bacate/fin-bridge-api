@@ -1,6 +1,19 @@
-import { accountData } from "../database/database"
-import { Account } from "../models/account-model"
+import mongoose from "mongoose";
+import { Account } from "../models/account-model";
 
-export const getAccountRepository = async (): Promise<Account[]> => {
-    return await accountData()
+mongoose.connect("mongodb://localhost:27017/finbridge-api").then(() => {
+    console.log("Database is connected")
+}).catch((error) => console.log(error))
+
+const accountSchema = new mongoose.Schema({
+    name: String,
+    identify: String,
+    balance: Number,
+    fromBank: String
+})
+
+const AccountModel = mongoose.model("accounts", accountSchema)
+
+export const accountData = async (): Promise<Account[]> => {
+    return await AccountModel.find()
 }
